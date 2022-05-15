@@ -1,0 +1,13 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestIsSated {
+
+	@Test
+	void DeerSatedTest() {
+		Deer deer = new Deer(FoodType.Plants, 1200);
+		assertTrue(deer.isSated(null, 0));
+	}
+
+}

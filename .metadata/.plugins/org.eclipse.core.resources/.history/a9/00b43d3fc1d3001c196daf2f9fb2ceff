@@ -1,0 +1,10 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Deer deer = new Deer(FoodType.Plants, 1000);
+		deer.eat(FoodType.Plants, 100);
+
+	}
+
+}

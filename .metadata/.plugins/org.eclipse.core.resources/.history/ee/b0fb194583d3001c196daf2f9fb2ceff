@@ -1,0 +1,10 @@
+
+public interface Animal {
+String foodType = "";
+int calories = 0;
+
+public void eat(String foodType, int calories);
+
+public boolean isSated();
+
+}

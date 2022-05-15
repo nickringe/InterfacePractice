@@ -1,0 +1,25 @@
+
+public class Deer implements Animal {
+
+	FoodType foodType;
+	int calories;
+	
+	public void eat(FoodType foodType, int calories) {
+		//need to somehow make this a working method
+
+	}
+	
+	public boolean isSated(FoodType foodType, int calories) {
+		if (foodType == FoodType.Plants && calories >= 1200) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isSated() {
+		return false;
+	}
+
+}

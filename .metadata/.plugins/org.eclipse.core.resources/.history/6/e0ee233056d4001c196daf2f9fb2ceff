@@ -1,0 +1,50 @@
+
+public class Bush implements Animal {
+
+	FoodType foodType;
+	int calories;
+	
+	public Bush(FoodType foodType, int calories) {
+		super();
+		this.foodType = foodType;
+		this.calories = calories;
+	}
+	
+	@Override
+	public void eat(FoodType foodType, int calories) {
+		if (foodType == FoodType.Light) {
+			this.calories = this.calories + calories;
+			System.out.println("The Bush just ate " + calories + " calories worth of " + FoodType.Light);
+			isSated(foodType, calories);
+		} else {
+			System.out.println("Bushes can only eat Light, they do not eat " + foodType + ".");
+		}
+		
+	}
+
+	@Override
+	public boolean isSated() {
+		
+		return false;
+	}
+
+	@Override
+	public boolean isSated(FoodType foodType, int calories) {
+		if (this.calories >= 50) {
+			System.out.println("This Bush is fully fed.");
+			return true;
+		} else {
+			System.out.println("This Bush still needs " + (50 - this.calories) + " more calories to be fully fed!");
+			return false;
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "Bush foodType: " + foodType + ", calories: " + calories;
+	}
+	
+	
+	
+
+}

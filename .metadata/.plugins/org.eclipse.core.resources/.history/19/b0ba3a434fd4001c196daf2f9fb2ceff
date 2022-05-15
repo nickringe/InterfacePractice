@@ -1,0 +1,39 @@
+
+public class Pig implements Animal {
+
+	
+	FoodType foodType;
+	int calories;
+	
+	public Pig(FoodType foodType, int calories) {
+		super();
+		this.foodType = foodType;
+		this.calories = calories;
+	}
+	
+	@Override
+	public void eat(FoodType foodType, int calories) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isSated() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isSated(FoodType foodType, int calories) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public String toString() {
+		return "Pig foodType: " + foodType + ", calories: " + calories;
+	}
+	
+	
+
+}

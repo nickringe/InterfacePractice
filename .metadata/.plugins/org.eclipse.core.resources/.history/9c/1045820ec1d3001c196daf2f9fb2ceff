@@ -1,0 +1,41 @@
+
+public class Deer implements Animal {
+
+	FoodType foodType;
+	int calories;
+//	int caloriesEaten;
+	
+	
+	
+	public Deer(FoodType foodType, int calories) {
+		super();
+		this.foodType = foodType;
+		this.calories = calories;
+//		this.caloriesEaten = caloriesEaten;
+	}
+
+	public void eat(FoodType foodType, int calories) {
+		if (foodType == FoodType.Plants) {
+			this.caloriesEaten = calories;
+			System.out.println("The Deer just ate " + calories + " calories worth of " + FoodType.Plants);
+		}
+		isSated(foodType, calories);
+
+	}
+	
+	public boolean isSated(FoodType foodType, int calories) {
+		if (foodType == FoodType.Plants && calories >= 1200) {
+			System.out.println("This deer is fully fed.");
+			return true;
+		} else {
+			System.out.println("This deer still needs " + (1200 - calories) + " more calories to be fully fed!");
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isSated() {
+		return false;
+	}
+
+}

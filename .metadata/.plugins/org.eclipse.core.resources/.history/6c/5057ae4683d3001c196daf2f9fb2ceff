@@ -1,0 +1,17 @@
+
+public class Deer implements Animal{
+
+	@Override
+	public void eat(String foodType, int calories) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isSated() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+
+}

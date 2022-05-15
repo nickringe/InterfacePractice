@@ -1,0 +1,11 @@
+
+public interface Animal {
+	
+public static final FoodType enumBody = null;
+int calories = 0;
+
+public void eat(String foodType, int calories);
+
+public boolean isSated();
+
+}

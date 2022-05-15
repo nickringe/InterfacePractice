@@ -1,0 +1,53 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class TestIsSated {
+
+	@Test
+	void DeerSatedTest() {
+		Deer deer = new Deer(FoodType.Plants, 1200);
+		assertTrue(deer.isSated(null, 0));
+	}
+	
+	@Test
+	void DeerSatedTest2() {
+		Deer deer = new Deer(FoodType.Plants, 1000);
+		deer.eat(FoodType.Plants, 200);
+		assertTrue(deer.isSated(null, 0));
+	}
+	
+	@Test
+	void DeerNotSatedTest() {
+		Deer deer = new Deer(FoodType.Plants, 1000);
+		deer.eat(FoodType.Meat, 200);
+		assertFalse(deer.isSated(null, 0));
+	}
+	
+	@Test
+	void DeerNotSatedTest2() {
+		Deer deer = new Deer(FoodType.Light, 1200);
+		assertFalse(deer.isSated(null, 0));
+	}
+	
+	@Test
+	void BushSatedTest() {
+		Bush bush = new Bush(FoodType.Light, 10);
+		assertFalse(bush.isSated(null, 0));
+	}
+	
+	@Test
+	void BushSatedTest2() {
+		Bush bush = new Bush(FoodType.Light, 50);
+		assertTrue(bush.isSated(null, 0));
+	}
+	
+	@Test
+	void BushSatedTest3() {
+		Bush bush = new Bush(FoodType.Light, 40);
+		bush.eat(FoodType.Light, 10);
+		assertTrue(bush.isSated(null, 0));
+	}
+	
+
+}

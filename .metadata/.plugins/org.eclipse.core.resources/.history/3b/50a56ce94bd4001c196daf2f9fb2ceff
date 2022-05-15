@@ -1,0 +1,13 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Deer deer = new Deer(FoodType.Plants, 1000);
+		System.out.println(deer.toString());
+		deer.eat(FoodType.Plants, 100);
+		System.out.println(deer.toString());
+		deer.eat(FoodType.Plants, 101);
+
+	}
+
+}

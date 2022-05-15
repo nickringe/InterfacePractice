@@ -1,0 +1,24 @@
+
+public class Deer implements Animal {
+
+	FoodType foodType;
+	
+	public void eat(FoodType foodType, int calories) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public boolean isSated(FoodType foodType, int calories) {
+		if (foodType == 'Plants' && calories >= 1200) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	@Override
+	public boolean isSated() {
+		return false;
+	}
+
+}
